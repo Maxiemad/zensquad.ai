@@ -33,7 +33,7 @@ export default function CustomCursor() {
       {trail.map((point, index) => (
         <motion.div
           key={point.id}
-          className="fixed pointer-events-none z-50 w-1 h-1 rounded-full bg-yellow-500"
+          className="fixed pointer-events-none z-[60] w-1 h-1 rounded-full bg-yellow-500"
           style={{
             left: point.x,
             top: point.y,
@@ -46,7 +46,7 @@ export default function CustomCursor() {
       ))}
 
       <motion.div
-        className="fixed pointer-events-none z-50 rounded-full border-2 border-white mix-blend-difference"
+        className="fixed pointer-events-none z-[60] rounded-full border-2 border-white mix-blend-difference"
         style={{
           left: mousePosition.x,
           top: mousePosition.y,
