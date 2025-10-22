@@ -34,7 +34,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12 lg:h-16">
+        <div className="flex items-center justify-between h-14 lg:h-16">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -43,7 +43,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="ZenSquad.ai Logo"
-              className="h-30 w-30 lg:h-36 lg:w-36 object-contain"
+              className="h-8 w-8 lg:h-40 lg:w-40 object-contain"
             />
           </motion.div>
 
@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-gray-800 hover:text-yellow-600 transition-colors duration-300 cursor-pointer"
+            className="md:hidden text-gray-800 hover:text-yellow-600 transition-colors duration-300 cursor-pointer flex items-center justify-center"
           >
             <svg
               className="w-6 h-6"
@@ -106,9 +106,9 @@ export default function Navbar() {
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden bg-white/5 backdrop-blur-md rounded-lg mt-2"
+          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-white/20"
         >
-          <div className="px-4 py-4 space-y-4">
+          <div className="px-4 py-6 space-y-3">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
