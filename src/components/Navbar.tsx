@@ -43,7 +43,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="ZenSquad.ai Logo"
-              className="h-8 w-8 lg:h-40 lg:w-40 object-contain"
+              className="h-20 w-20 lg:h-40 lg:w-40 object-contain"
             />
           </motion.div>
 
