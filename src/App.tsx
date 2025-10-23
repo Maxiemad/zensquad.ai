@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
-import ParticleBackground from './components/ParticleBackground';
 import HeroSection from './components/HeroSection';
 import ProblemSection from './components/ProblemSection';
 import ApproachSection from './components/ApproachSection';
@@ -28,7 +27,6 @@ function App() {
       {!loading && (
         <div className="relative bg-black min-h-screen overflow-x-hidden">
           <CustomCursor />
-          <ParticleBackground />
           <Navbar />
 
           <div className="relative z-10">
