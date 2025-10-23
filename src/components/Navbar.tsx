@@ -29,8 +29,8 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-black/90 backdrop-blur-md border-b border-white/30 shadow-lg'
-          : 'bg-black/80 backdrop-blur-sm'
+          ? 'bg-white/90 backdrop-blur-md border-b border-white/30 shadow-lg'
+          : 'bg-white/80 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +57,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
                 whileHover={{ y: -2 }}
-                className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium relative group cursor-pointer"
+                className="text-gray-800 hover:text-yellow-600 transition-colors duration-300 font-medium relative group cursor-pointer"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-amber-300 transition-all duration-300 group-hover:w-full"></span>
@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer flex items-center justify-center"
+            className="md:hidden text-gray-800 hover:text-yellow-600 transition-colors duration-300 cursor-pointer flex items-center justify-center"
           >
             <svg
               className="w-6 h-6"
@@ -106,7 +106,7 @@ export default function Navbar() {
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden bg-black/95 backdrop-blur-md border-t border-white/20"
+          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-white/20"
         >
           <div className="px-4 py-6 space-y-3">
             {navItems.map((item, index) => (
@@ -120,7 +120,7 @@ export default function Navbar() {
                 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-white hover:text-yellow-400 transition-colors duration-300 font-medium py-2 cursor-pointer"
+                className="block text-gray-800 hover:text-yellow-600 transition-colors duration-300 font-medium py-2 cursor-pointer"
               >
                 {item.name}
               </motion.a>

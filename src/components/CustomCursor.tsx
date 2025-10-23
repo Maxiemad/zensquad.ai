@@ -46,27 +46,19 @@ export default function CustomCursor() {
       ))}
 
       <motion.div
-        className="fixed pointer-events-none z-[60] rounded-full border-2 border-white mix-blend-difference"
+        className="fixed pointer-events-none z-[60] rounded-full bg-yellow-500"
         style={{
           left: mousePosition.x,
           top: mousePosition.y,
         }}
         animate={{
-          width: isHovering ? 50 : 32,
-          height: isHovering ? 50 : 32,
-          x: isHovering ? -25 : -16,
-          y: isHovering ? -25 : -16,
+          width: isHovering ? 20 : 12,
+          height: isHovering ? 20 : 12,
+          x: isHovering ? -10 : -6,
+          y: isHovering ? -10 : -6,
         }}
         transition={{ type: 'spring', stiffness: 500, damping: 28 }}
-      >
-        <div
-          className="absolute top-1/2 left-1/2 w-1 h-1 rounded-full bg-yellow-500"
-          style={{
-            transform: 'translate(-50%, -50%)',
-            boxShadow: '0 0 6px rgba(212, 175, 55, 0.8)',
-          }}
-        />
-      </motion.div>
+      />
     </>
   );
 }
